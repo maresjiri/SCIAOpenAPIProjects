@@ -1,0 +1,12 @@
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SimpleFrame\bin\Debug\SimpleFrame.exe.config
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SimpleFrame\bin\Debug\SimpleFrame.exe
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SimpleFrame\bin\Debug\SimpleFrame.pdb
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SimpleFrame\obj\Debug\SimpleFrame.csproj.AssemblyReference.cache
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SimpleFrame\obj\Debug\SimpleFrame.csproj.CoreCompileInputs.cache
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SimpleFrame\obj\Debug\SimpleFrame.exe
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SimpleFrame\obj\Debug\SimpleFrame.pdb
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SimpleFrame\bin\Debug\EsaProjects\EmptyProject24.0.esa
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SimpleFrame\bin\Debug\SCIAOpenAPIPortalFrame.exe
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SimpleFrame\bin\Debug\SCIAOpenAPIPortalFrame.pdb
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SimpleFrame\bin\Debug\SCIAOpenAPIPortalFrame.exe.config
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SimpleFrame\obj\Debug\SimpleFr.4D17E1A1.Up2Date

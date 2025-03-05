@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Platforms>x64</Platforms>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net48</TargetFramework>
+		<AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="SCIA.OpenAPI">
+			<HintPath>C:\Program Files\SCIA\Engineer24.0\SCIA.OpenAPI.dll</HintPath>
+			<Private>False</Private>
+			<CopyLocal>False</CopyLocal>
+		</Reference>
+		
+	</ItemGroup>
+	
+	<ItemGroup>
+		<Compile Include="Program.cs" />
+		<Compile Include="Tools.cs" />
+		<Compile Include="ConsoleHelper.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="EsaProjects\EmptyProject24.0.esa">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<Compile Include="Examples\ExamplesMenu.cs" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<Compile Include="Examples\CreateModelWithOpenApiExample.cs" />
+	</ItemGroup>
+	
+	
+</Project>

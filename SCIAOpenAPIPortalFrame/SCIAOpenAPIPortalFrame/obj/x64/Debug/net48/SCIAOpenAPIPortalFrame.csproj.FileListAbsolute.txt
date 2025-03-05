@@ -1,0 +1,11 @@
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\bin\x64\Debug\net48\EsaProjects\EmptyProject24.0.esa
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\obj\x64\Debug\net48\SCIAOpenAPIPortalFrame.csproj.AssemblyReference.cache
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\obj\x64\Debug\net48\SCIAOpenAPIPortalFrame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\obj\x64\Debug\net48\SCIAOpenAPIPortalFrame.AssemblyInfoInputs.cache
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\obj\x64\Debug\net48\SCIAOpenAPIPortalFrame.AssemblyInfo.cs
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\obj\x64\Debug\net48\SCIAOpenAPIPortalFrame.csproj.CoreCompileInputs.cache
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\obj\x64\Debug\net48\SCIAOpenAPIPortalFrame.exe
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\obj\x64\Debug\net48\SCIAOpenAPIPortalFrame.pdb
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\bin\x64\Debug\net48\SCIAOpenAPIPortalFrame.exe.config
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\bin\x64\Debug\net48\SCIAOpenAPIPortalFrame.exe
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\bin\x64\Debug\net48\SCIAOpenAPIPortalFrame.pdb
