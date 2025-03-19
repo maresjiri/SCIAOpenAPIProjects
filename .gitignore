@@ -1,0 +1,12 @@
+
+*.bin
+*.bin
+*.db
+*.v2
+*.vsidx
+*.v2
+/SCIAOpenAPIPortalFrame/SCIAOpenAPIPortalFrame/.vs/SCIAOpenAPIPortalFrame
+*.exe
+*.pdb
+*.cache
+*.exe

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\maresjiri\\CC\\SOURCECODE_Github\\SCIAOpenAPIProjects\\SCIAOpenAPIPortalFrame\\SCIAOpenAPIPortalFrame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95293BD4-7446-4A86-82BC-D680ECF545DC}|SCIAOpenAPIPortalFrame.csproj|c:\\users\\maresjiri\\cc\\sourcecode_github\\sciaopenapiprojects\\sciaopenapiportalframe\\sciaopenapiportalframe\\tools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95293BD4-7446-4A86-82BC-D680ECF545DC}|SCIAOpenAPIPortalFrame.csproj|solutionrelative:tools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{95293BD4-7446-4A86-82BC-D680ECF545DC}|SCIAOpenAPIPortalFrame.csproj|c:\\users\\maresjiri\\cc\\sourcecode_github\\sciaopenapiprojects\\sciaopenapiportalframe\\sciaopenapiportalframe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95293BD4-7446-4A86-82BC-D680ECF545DC}|SCIAOpenAPIPortalFrame.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95293BD4-7446-4A86-82BC-D680ECF545DC}|SCIAOpenAPIPortalFrame.csproj|c:\\users\\maresjiri\\cc\\sourcecode_github\\sciaopenapiprojects\\sciaopenapiportalframe\\sciaopenapiportalframe\\tools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95293BD4-7446-4A86-82BC-D680ECF545DC}|SCIAOpenAPIPortalFrame.csproj|solutionrelative:tools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95293BD4-7446-4A86-82BC-D680ECF545DC}|SCIAOpenAPIPortalFrame.csproj|c:\\users\\maresjiri\\cc\\sourcecode_github\\sciaopenapiprojects\\sciaopenapiportalframe\\sciaopenapiportalframe\\examples\\examplesmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "Examples\\CreateModelWithOpenApiExample.cs",
               "ToolTip": "C:\\Users\\maresjiri\\CC\\SOURCECODE_Github\\SCIAOpenAPIProjects\\SCIAOpenAPIPortalFrame\\SCIAOpenAPIPortalFrame\\Examples\\CreateModelWithOpenApiExample.cs",
               "RelativeToolTip": "Examples\\CreateModelWithOpenApiExample.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAnwCIAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-13T13:04:40.309Z",
               "EditorCaption": ""
@@ -57,33 +57,33 @@
               "RelativeDocumentMoniker": "Examples\\ExamplesMenu.cs",
               "ToolTip": "C:\\Users\\maresjiri\\CC\\SOURCECODE_Github\\SCIAOpenAPIProjects\\SCIAOpenAPIPortalFrame\\SCIAOpenAPIPortalFrame\\Examples\\ExamplesMenu.cs",
               "RelativeToolTip": "Examples\\ExamplesMenu.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAlwCMAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-13T13:04:25.045Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Tools.cs",
               "DocumentMoniker": "C:\\Users\\maresjiri\\CC\\SOURCECODE_Github\\SCIAOpenAPIProjects\\SCIAOpenAPIPortalFrame\\SCIAOpenAPIPortalFrame\\Tools.cs",
               "RelativeDocumentMoniker": "Tools.cs",
               "ToolTip": "C:\\Users\\maresjiri\\CC\\SOURCECODE_Github\\SCIAOpenAPIProjects\\SCIAOpenAPIPortalFrame\\SCIAOpenAPIPortalFrame\\Tools.cs",
               "RelativeToolTip": "Tools.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAIAxwGMAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAAAJwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-13T12:58:44.67Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\maresjiri\\CC\\SOURCECODE_Github\\SCIAOpenAPIProjects\\SCIAOpenAPIPortalFrame\\SCIAOpenAPIPortalFrame\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\maresjiri\\CC\\SOURCECODE_Github\\SCIAOpenAPIProjects\\SCIAOpenAPIPortalFrame\\SCIAOpenAPIPortalFrame\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAYwFcAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-13T12:58:25.73Z",
               "EditorCaption": ""

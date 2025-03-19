@@ -48,6 +48,62 @@ namespace SCIAOpenAPIPortalFrame
              * Use the model variable to create objects in SCIA Engineer using the OpenAPI
              * e.g. model.CreateMaterial(new Material(Guid.NewGuid(), "S235", 1, "S 235"));
              */
+
+            var material = new Material(Guid.NewGuid(), "S235", 1, "S 235");
+
+            bool result = model.CreateMaterial(material);
+
+            if (!result)
+            {
+                Console.WriteLine("ERROR: Failed to create material.");
+            }
+
+            var css = new CrossSectionManufactured(Guid.NewGuid(), "CS1", material.Id, "HEA200", 1, 1);
+
+            result = model.CreateCrossSection(css);
+
+            if (!result)
+            {
+                Console.WriteLine("ERROR: Failed to create cross-section");
+            }
+
+            var node1 = new StructNode(Guid.NewGuid(), "Node1", 0, 0, 0);
+            var node2 = new StructNode(Guid.NewGuid(), "Node2", 0, 0, 5);
+            var node3 = new StructNode(Guid.NewGuid(), "Node3", 6, 0, 6);
+            var node4 = new StructNode(Guid.NewGuid(), "Node4", 12, 0, 5);
+            var node5 = new StructNode(Guid.NewGuid(), "Node5", 12, 0, 0);
+
+            // add nodes in to a list
+            List<StructNode> nodes = new List<StructNode>();
+
+
+
+            result = model.CreateNode(node1);
+            if (!result)
+            {
+                Console.WriteLine("ERROR: Failed to create node1");
+            }
+
+            result = model.CreateNode(node2);
+            if (!result)
+            {
+                Console.WriteLine("ERROR: Failed to create node2");
+            }
+
+
+
+
+
+            var beam = new Beam(Guid.NewGuid(), "Beam1", css.Id, new Guid[2] { node1.Id, node2.Id });
+
+            result = model.CreateBeam(beam);
+
+            if (!result)
+            {
+                Console.WriteLine("ERROR: Failed to create beam");
+            }
+
+
         }
 
         private static void CreateCustomModel()
@@ -59,8 +115,6 @@ namespace SCIAOpenAPIPortalFrame
             senData.Project.CloseProject(SaveMode.SaveChangesNo);
 
             senData.Environment.Dispose();
-
-
 
         }
     }
