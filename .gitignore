@@ -10,3 +10,6 @@
 *.pdb
 *.cache
 *.exe
+*.bin
+*.v2
+*.vsidx
