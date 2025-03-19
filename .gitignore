@@ -14,3 +14,4 @@
 *.v2
 *.vsidx
 /SCIAOpenAPIPortalFrame/SCIAOpenAPIPortalFrame/.vs
+/SCIAOpenAPIPortalFrame/SCIAOpenAPIPortalFrame/bin/x64
