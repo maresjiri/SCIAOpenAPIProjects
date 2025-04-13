@@ -24,3 +24,6 @@ SCIAOpenAPIPortalFrame/SCIAOpenAPIPortalFrame/.vs/ProjectEvaluation/sciaopenapip
 *.pdb
 *.exe
 *.bin
+*.bin
+/SCIAOpenAPIPortalFrame/SCIAOpenAPIPortalFrame/.vs
+/SCIAOpenAPIPortalFrame/SCIAOpenAPIPortalFrame/bin/x64

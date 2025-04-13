@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SCIAOpenAPIPortalFrame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7a3fa776eab7ba6363bbcfa7ac1a12d60245fc8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72192853b88221660a6071421d8569e8959ddc75")]
 [assembly: System.Reflection.AssemblyProductAttribute("SCIAOpenAPIPortalFrame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SCIAOpenAPIPortalFrame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
