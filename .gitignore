@@ -32,3 +32,8 @@ SCIAOpenAPIPortalFrame/SCIAOpenAPIPortalFrame/.vs/ProjectEvaluation/sciaopenapip
 /SCIAOpenAPIPortalFrame/SCIAOpenAPIPortalFrame/.vs/SCIAOpenAPIPortalFrame/v17
 /SCIAOpenAPIPortalFrame/SCIAOpenAPIPortalFrame/bin/x64/Debug/net48
 /SCIAOpenAPIPortalFrame/SCIAOpenAPIPortalFrame/bin/x64/Debug/net48
+*.pdb
+*.exe
+*.json
+/SCIAOpenAPIPortalFrame/SCIAOpenAPIPortalFrame/.vs/SCIAOpenAPIPortalFrame/v17
+/SCIAOpenAPIPortalFrame/SCIAOpenAPIPortalFrame/.vs/SCIAOpenAPIPortalFrame/v17

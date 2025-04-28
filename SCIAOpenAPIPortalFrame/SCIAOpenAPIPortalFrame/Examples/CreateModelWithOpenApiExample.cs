@@ -18,6 +18,7 @@ namespace SCIAOpenAPIPortalFrame.Examples
             this.emptyProjectPath = emptyProjectPath;
         }
 
+
         public void Run()
         {
             (Environment Environment, EsaProject Project) senData = Tools.StartSciaEngineer(senPath, senTempPath, emptyProjectPath);

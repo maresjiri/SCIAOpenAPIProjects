@@ -17,6 +17,7 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+		<Compile Include="Examples\CreateModelBeamWebOpenWithOpenAPIExample.cs" />
 		<Compile Include="Program.cs" />
 		<Compile Include="Tools.cs" />
 		<Compile Include="ConsoleHelper.cs" />

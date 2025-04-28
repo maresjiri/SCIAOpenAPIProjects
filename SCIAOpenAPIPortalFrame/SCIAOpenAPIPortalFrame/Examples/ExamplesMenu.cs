@@ -13,6 +13,9 @@ namespace SCIAOpenAPIPortalFrame.Examples
             Console.WriteLine("Please choose one of the following:");
             Console.WriteLine("S.) Create example model in SCIA Engineer using OpenAPI");
             Console.WriteLine("C.) Create my own defined model from code in SCIA Engineer");
+            // beam example, step 1
+            Console.WriteLine("B.) Create beam with web opening from code in SCIA Engineer");
+
             Console.Write("");
 
             string choice = ConsoleHelper.Interact<string>("Your choice: ").ToUpperInvariant();
@@ -23,6 +26,14 @@ namespace SCIAOpenAPIPortalFrame.Examples
                 case "S":
                     {
                         var example = new CreateModelWithOpenApiExample(senPath, senTempPath, emptyProjectPath);
+                        example.Run();
+                        return false;
+                    }
+
+                // beam example, step 2
+                case "B":
+                    {
+                        var example = new CreateModelBeamWebOpenWithOpenAPIExample(senPath, senTempPath, emptyProjectPath);
                         example.Run();
                         return false;
                     }

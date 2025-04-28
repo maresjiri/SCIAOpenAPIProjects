@@ -10,4 +10,3 @@ C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFra
 C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\bin\x64\Debug\net48\SCIAOpenAPIPortalFrame.exe
 C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\bin\x64\Debug\net48\SCIAOpenAPIPortalFrame.pdb
 C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\obj\x64\Debug\net48\SCIAOpenAPIPortalFrame.sourcelink.json
-C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\obj\x64\Debug\net48\SCIAOpenAPIPortalFrame.csproj.ResolveComReference.cache
