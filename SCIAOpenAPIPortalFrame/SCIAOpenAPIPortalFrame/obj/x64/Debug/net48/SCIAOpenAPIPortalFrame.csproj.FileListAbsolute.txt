@@ -10,3 +10,6 @@ C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFra
 C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\bin\x64\Debug\net48\SCIAOpenAPIPortalFrame.exe
 C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\bin\x64\Debug\net48\SCIAOpenAPIPortalFrame.pdb
 C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\obj\x64\Debug\net48\SCIAOpenAPIPortalFrame.sourcelink.json
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\bin\x64\Debug\net48\CSInfrastructure.dll
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\bin\x64\Debug\net48\UnitsNet.dll
+C:\Users\maresjiri\CC\SOURCECODE_Github\SCIAOpenAPIProjects\SCIAOpenAPIPortalFrame\SCIAOpenAPIPortalFrame\obj\x64\Debug\net48\SCIAOpen.6600A1E1.Up2Date

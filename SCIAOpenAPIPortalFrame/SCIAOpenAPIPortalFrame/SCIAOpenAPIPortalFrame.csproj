@@ -8,10 +8,96 @@
 		<PlatformTarget>x64</PlatformTarget>
 	</PropertyGroup>
 	<ItemGroup>
+		<Reference Include="CSInfrastructure">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\CSInfrastructure.dll</HintPath>
+		</Reference>
+		<Reference Include="ModelExchanger.AnalysisDataModel">
+		  <HintPath>..\..\..\PFS\ccShed\ccScia\bin\Debug\ModelExchanger.AnalysisDataModel.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="ModelExchanger.AnalysisDataModel.Contracts">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\ModelExchanger.AnalysisDataModel.Contracts.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="ModelExchanger.AnalysisDataModel.Implementation">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\ModelExchanger.AnalysisDataModel.Implementation.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="ModelExchanger.Shared.Models">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\ModelExchanger.Shared.Models.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
 		<Reference Include="SCIA.OpenAPI">
 			<HintPath>C:\Program Files\SCIA\Engineer24.0\SCIA.OpenAPI.dll</HintPath>
 			<Private>False</Private>
 			<CopyLocal>False</CopyLocal>
+		</Reference>
+		<Reference Include="SciaTools.AdmToAdm.AdmSignalR.Contracts">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\SciaTools.AdmToAdm.AdmSignalR.Contracts.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="SciaTools.AdmToAdm.AdmSignalR.Implementation">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\SciaTools.AdmToAdm.AdmSignalR.Implementation.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="SciaTools.AdmToAdm.AdmSignalR.Integration">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\SciaTools.AdmToAdm.AdmSignalR.Integration.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="SciaTools.AdmToAdm.AdmSignalR.Models">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\SciaTools.AdmToAdm.AdmSignalR.Models.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="SciaTools.AdmToAdm.Integration.HubClientTest">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\SciaTools.AdmToAdm.Integration.HubClientTest.exe</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="SciaTools.AdmToAdm.Integration.Implementation">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\SciaTools.AdmToAdm.Integration.Implementation.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="SciaTools.AdmToAdm.Integration.Models">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\SciaTools.AdmToAdm.Integration.Models.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="SciaTools.AdmToAdm.Integration.Scia">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\SciaTools.AdmToAdm.Integration.Scia.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="SciaTools.Kernel.Common.Contracts">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\SciaTools.Kernel.Common.Contracts.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="SciaTools.Kernel.Common.Implementation">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\SciaTools.Kernel.Common.Implementation.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="SciaTools.Kernel.Common.Integration">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\SciaTools.Kernel.Common.Integration.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="SciaTools.Kernel.Common.Models">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\SciaTools.Kernel.Common.Models.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="SciaTools.Kernel.ModelExchangerExtension.Contracts">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\SciaTools.Kernel.ModelExchangerExtension.Contracts.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="SciaTools.Kernel.ModelExchangerExtension.Implementation">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\SciaTools.Kernel.ModelExchangerExtension.Implementation.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="SciaTools.Kernel.ModelExchangerExtension.Integration">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\SciaTools.Kernel.ModelExchangerExtension.Integration.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="SciaTools.Kernel.ModelExchangerExtension.Models">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\SciaTools.Kernel.ModelExchangerExtension.Models.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="UnitsNet">
+		  <HintPath>..\..\..\..\..\..\..\Program Files\SCIA\Engineer24.0\OpenAPI_dll\UnitsNet.dll</HintPath>
 		</Reference>
 		
 	</ItemGroup>

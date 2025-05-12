@@ -10,6 +10,10 @@ using SCIA.OpenAPI.OpenAPIEnums;
 using SCIA.OpenAPI.StructureModelDefinition;
 using Environment = SCIA.OpenAPI.Environment;
 
+using ModelExchanger.AnalysisDataModel.Models;
+using ModelExchanger.AnalysisDataModel.StructuralElements;
+using UnitsNet;
+
 
 using Results64Enums;
 
@@ -55,8 +59,8 @@ namespace SCIAOpenAPIPortalFrame.Examples
 
         private static Guid Lc1Id { get; } = Guid.NewGuid();
         private static Guid C1Id { get; } = Guid.NewGuid();
-        private static string SlabName { get; } = "S1";
-        private static string beamName { get; } = "b1";
+        //private static string SlabName { get; } = "S1";
+        //private static string beamName { get; } = "b1";
 
 
         private bool CreateModelUsingOpenApi(Structure model)
@@ -74,65 +78,96 @@ namespace SCIAOpenAPIPortalFrame.Examples
             model.CreateCrossSection(rect300x300);
             #endregion
             #region Create Nodes
-            double a = 5.0;
-            double b = 6.0;
-            double c = 4.0;
+            double span = 5.0;
+            double depth = 0.8;
+            double flangeWidth = 0.5;
             StructNode n1 = new StructNode(Guid.NewGuid(), "n1", 0, 0, 0);
-            StructNode n2 = new StructNode(Guid.NewGuid(), "n2", a, 0, 0);
-            StructNode n3 = new StructNode(Guid.NewGuid(), "n3", a, b, 0);
-            StructNode n4 = new StructNode(Guid.NewGuid(), "n4", 0, b, 0);
-            StructNode n5 = new StructNode(Guid.NewGuid(), "n5", 0, 0, c);
-            StructNode n6 = new StructNode(Guid.NewGuid(), "n6", a, 0, c);
-            StructNode n7 = new StructNode(Guid.NewGuid(), "n7", a, b, c);
-            StructNode n8 = new StructNode(Guid.NewGuid(), "n8", 0, b, c);
-            foreach (var x in new List<StructNode> { n1, n2, n3, n4, n5, n6, n7, n8 }) { model.CreateNode(x); }
-            #endregion
-            #region Create Beams
-            Beam b1 = new Beam(Guid.NewGuid(), beamName, hea260.Id, new Guid[2] { n1.Id, n5.Id });
-            Beam b2 = new Beam(Guid.NewGuid(), "b2", hea260.Id, new Guid[2] { n2.Id, n6.Id });
-            Beam b3 = new Beam(Guid.NewGuid(), "b3", hea260.Id, new Guid[2] { n3.Id, n7.Id });
-            Beam b4 = new Beam(Guid.NewGuid(), "b4", hea260.Id, new Guid[2] { n4.Id, n8.Id });
-            foreach (var x in new List<Beam> { b1, b2, b3, b4 }) { model.CreateBeam(x); }
-            #endregion
-            #region Create Slab
-            double thickness = 0.30;
-            Slab s1 = new Slab(Guid.NewGuid(), SlabName, (int)Slab_Type.Plate, concmat.Id, thickness, new Guid[4] { n5.Id, n6.Id, n7.Id, n8.Id });
+            StructNode n2 = new StructNode(Guid.NewGuid(), "n2", span, 0, 0);
+            StructNode n3 = new StructNode(Guid.NewGuid(), "n3", 0, 0, depth);
+            StructNode n4 = new StructNode(Guid.NewGuid(), "n4", span, 0, depth);
+            StructNode n5 = new StructNode(Guid.NewGuid(), "n5", 0, flangeWidth/2, 0);
+            StructNode n6 = new StructNode(Guid.NewGuid(), "n6", span, flangeWidth/2, 0);
+            StructNode n7 = new StructNode(Guid.NewGuid(), "n7", 0,flangeWidth/2, depth);
+            StructNode n8 = new StructNode(Guid.NewGuid(), "n8", span, flangeWidth / 2, depth);
+            StructNode n9 = new StructNode(Guid.NewGuid(), "n9", 0, -flangeWidth / 2, 0);
+            StructNode n10 = new StructNode(Guid.NewGuid(), "n10", span, -flangeWidth / 2, 0);
+            StructNode n11 = new StructNode(Guid.NewGuid(), "n11", 0, -flangeWidth / 2, depth);
+            StructNode n12 = new StructNode(Guid.NewGuid(), "n12", span, -flangeWidth / 2, depth);
+            StructNode n13 = new StructNode(Guid.NewGuid(), "n13", span/3, 0, depth);
+            StructNode n14 = new StructNode(Guid.NewGuid(), "n14", 2*span/3, 0, depth);
+            
+            //StructNode n15 = new StructNode(Guid.NewGuid(), "n15", span, flangeWidth / 2, 0);
+            //StructNode n16 = new StructNode(Guid.NewGuid(), "n16", span, flangeWidth / 2, depth);
+            //StructNode n17 = new StructNode(Guid.NewGuid(), "n17", span, -flangeWidth / 2, 0);
+            //StructNode n18 = new StructNode(Guid.NewGuid(), "n18", span, -flangeWidth / 2, depth);
+
+
+            foreach (var x in new List<StructNode> { n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14 }) { model.CreateNode(x); }
+
+
+            //StructuralPointConnection n13 = new StructuralPointConnection(Guid.NewGuid(), "n13", Length.FromMeters(span / 3), Length.FromMeters(0), Length.FromMeters(depth));
+            //StructuralPointConnection n14 = new StructuralPointConnection(Guid.NewGuid(), "n14", Length.FromMeters(2 *span/3), Length.FromMeters(0), Length.FromMeters(depth));
+            //model.CreateAdmObject(n13);
+            //model.CreateAdmObject(n14);
+            
+            
+            
+
+            #region Create Plates
+            double thickness = 0.01;
+            Slab s1 = new Slab(Guid.NewGuid(), "Web1", (int)Slab_Type.Plate, concmat.Id, thickness, new Guid[6] { n1.Id, n2.Id, n4.Id, n14.Id, n13.Id, n3.Id });
             model.CreateSlab(s1);
+
+            Slab s2 = new Slab(Guid.NewGuid(), "TopFlangeR1", (int)Slab_Type.Plate, concmat.Id, thickness, new Guid[6] { n3.Id, n7.Id, n8.Id, n4.Id, n14.Id, n13.Id });
+            model.CreateSlab(s2);
+
+            Slab s3 = new Slab(Guid.NewGuid(), "TopFlangeL1", (int)Slab_Type.Plate, concmat.Id, thickness, new Guid[6] { n11.Id, n3.Id, n13.Id, n14.Id, n4.Id, n12.Id });
+            model.CreateSlab(s3);
+
+            Slab s4 = new Slab(Guid.NewGuid(), "BtmFlangeR1", (int)Slab_Type.Plate, concmat.Id, thickness, new Guid[4] { n1.Id, n5.Id, n6.Id, n2.Id });
+            model.CreateSlab(s4);
+
+            Slab s5 = new Slab(Guid.NewGuid(), "BtmFlangeL1", (int)Slab_Type.Plate, concmat.Id, thickness, new Guid[4] { n9.Id, n1.Id, n2.Id, n10.Id });
+            model.CreateSlab(s5);
+
+            // TODO CHANGE GUID TO 6
+
+            ////Slab s6 = new Slab(Guid.NewGuid(), "Web2", (int)Slab_Type.Plate, concmat.Id, thickness, new Guid[4] { n1.Id, n2.Id, n4.Id, n3.Id });
+            ////model.CreateSlab(s1);
+
+            ////Slab s7 = new Slab(Guid.NewGuid(), "TopFlangeR2", (int)Slab_Type.Plate, concmat.Id, thickness, new Guid[4] { n3.Id, n7.Id, n8.Id, n4.Id });
+            ////model.CreateSlab(s2);
+
+            ////Slab s8 = new Slab(Guid.NewGuid(), "TopFlangeL2", (int)Slab_Type.Plate, concmat.Id, thickness, new Guid[4] { n11.Id, n3.Id, n4.Id, n12.Id });
+            ////model.CreateSlab(s3);
+
+            ////Slab s9 = new Slab(Guid.NewGuid(), "BtmFlangeR2", (int)Slab_Type.Plate, concmat.Id, thickness, new Guid[4] { n1.Id, n5.Id, n6.Id, n2.Id });
+            ////model.CreateSlab(s4);
+
+            ////Slab s10 = new Slab(Guid.NewGuid(), "BtmFlangeL2", (int)Slab_Type.Plate, concmat.Id, thickness, new Guid[4] { n9.Id, n1.Id, n2.Id, n10.Id });
+            ////model.CreateSlab(s5);
+
+
+
             #endregion
+
+
+
+
+
             #region Create Support - in Node
             PointSupport Su1 = new PointSupport(Guid.NewGuid(), "Su1", n1.Id) { ConstraintRx = eConstraintType.Free, ConstraintRy = eConstraintType.Free, ConstraintRz = eConstraintType.Free };
-            PointSupport Su2 = new PointSupport(Guid.NewGuid(), "Su2", n2.Id) { ConstraintZ = eConstraintType.Flexible, StiffnessZ = 10000.0 };
-            PointSupport Su3 = new PointSupport(Guid.NewGuid(), "Su3", n3.Id);
-            PointSupport Su4 = new PointSupport(Guid.NewGuid(), "Su4", n4.Id);
-            foreach (var x in new List<PointSupport> { Su1, Su2, Su3, Su4 }) { model.CreatePointSupport(x); }
+            PointSupport Su2 = new PointSupport(Guid.NewGuid(), "Su2", n2.Id) { ConstraintRx = eConstraintType.Free, ConstraintRy = eConstraintType.Free, ConstraintRz = eConstraintType.Free };
+            PointSupport Su3 = new PointSupport(Guid.NewGuid(), "Su3", n5.Id) { ConstraintRx = eConstraintType.Free, ConstraintRy = eConstraintType.Free, ConstraintRz = eConstraintType.Free };
+            PointSupport Su4 = new PointSupport(Guid.NewGuid(), "Su4", n6.Id) { ConstraintRx = eConstraintType.Free, ConstraintRy = eConstraintType.Free, ConstraintRz = eConstraintType.Free };
+            PointSupport Su5 = new PointSupport(Guid.NewGuid(), "Su5", n9.Id) { ConstraintRx = eConstraintType.Free, ConstraintRy = eConstraintType.Free, ConstraintRz = eConstraintType.Free };
+            PointSupport Su6 = new PointSupport(Guid.NewGuid(), "Su6", n10.Id) { ConstraintRx = eConstraintType.Free, ConstraintRy = eConstraintType.Free, ConstraintRz = eConstraintType.Free };
+
+
+
+            foreach (var x in new List<PointSupport> { Su1, Su2, Su3, Su4, Su5, Su6 }) { model.CreatePointSupport(x); }
             #endregion
-            #region Create Support - on Beam & on Slab Edge
-            LineSupport lineSupport_onBeam = new LineSupport(Guid.NewGuid(), "linSupBeam", b1.Id)
-            {
-                ConstraintRx = eConstraintType.Free,
-                ConstraintRy = eConstraintType.Free,
-                ConstraintRz = eConstraintType.Free,
-                ConstraintX = eConstraintType.Flexible,
-                StiffnessX = 10.0,
-                ConstraintY = eConstraintType.Flexible,
-                StiffnessY = 10.0,
-                ConstraintZ = eConstraintType.Flexible,
-                StiffnessZ = 10.0,
-            };
-            LineSupport lineSupport_onEdge = new LineSupport(Guid.NewGuid(), "linSupEdge", s1.Id)
-            {
-                ConstraintRx = eConstraintType.Free,
-                ConstraintRy = eConstraintType.Free,
-                ConstraintRz = eConstraintType.Free,
-                ConstraintX = eConstraintType.Flexible,
-                StiffnessX = 10.0,
-                ConstraintY = eConstraintType.Flexible,
-                StiffnessY = 10.0,
-                ConstraintZ = eConstraintType.Flexible,
-                StiffnessZ = 10.0,
-                EdgeIndex = 2
-            };
-            foreach (var x in new List<LineSupport> { lineSupport_onBeam, lineSupport_onEdge }) { model.CreateLineSupport(x); }
+
             #endregion
             #endregion
             #region  ---------- Loads ---------------
@@ -210,131 +245,11 @@ namespace SCIAOpenAPIPortalFrame.Examples
             #region Create Load - Point Loads - in Node
             double loadValue;
             loadValue = -12500.0;
-            PointLoadInNode pln1 = new PointLoadInNode(Guid.NewGuid(), "pln1", loadValue, lc_perm.Id, n4.Id, (int)eDirection.X);
+            PointLoadInNode pln1 = new PointLoadInNode(Guid.NewGuid(), "pln1", loadValue, lc_perm.Id, n13.Id, (int)eDirection.Z);
             model.CreatePointLoadInNode(pln1);
-            #endregion
-            #region Create Load - Point Loads - Free
-            loadValue = -12500.0;
-            PointLoadFree plf1 = new PointLoadFree(Guid.NewGuid(), "plf1", lc_perm.Id, loadValue, a / 3.0, b / 3.0, c, (int)eDirection.Z, c - 1.0, c + 1.0);
-            model.CreatePointLoadFree(plf1);
-            #endregion
-            #region Create Load - Surface Loads - on Slab
-            loadValue = -12500.0;
-            SurfaceLoad sf1 = new SurfaceLoad(Guid.NewGuid(), "sf1", loadValue, lc_perm.Id, s1.Id, (int)eDirection.Z);
-            SurfaceLoad sf2 = new SurfaceLoad(Guid.NewGuid(), "sf2", loadValue, lc_var1.Id, s1.Id, (int)eDirection.Y);
-            SurfaceLoad sf3 = new SurfaceLoad(Guid.NewGuid(), "sf3", loadValue, lc_var2.Id, s1.Id, (int)eDirection.X);
-            SurfaceLoad sf4 = new SurfaceLoad(Guid.NewGuid(), "sf4", loadValue, lc_var3a.Id, s1.Id, (int)eDirection.X);
-            SurfaceLoad sf5 = new SurfaceLoad(Guid.NewGuid(), "sf5", loadValue, lc_var3b.Id, s1.Id, (int)eDirection.Y);
-            SurfaceLoad sf6 = new SurfaceLoad(Guid.NewGuid(), "sf6", loadValue, lc_var3c.Id, s1.Id, (int)eDirection.Z);
-            foreach (var x in new List<SurfaceLoad> { sf1 }) { model.CreateSurfaceLoad(x); }
-            #endregion
-            #region Create Load - Line Load - on Beam & on Slab Edge
-            var lin1 = new LineLoadOnBeam(Guid.NewGuid(), "lin1")
-            {
-                Member = b1.Id,
-                LoadCase = lc_perm.Id,
-                Distribution = eLineLoadDistribution.Trapez,
-                Value1 = -12500,
-                Value2 = -12500,
-                CoordinateDefinition = eCoordinateDefinition.Relative,
-                StartPoint = 0.01,
-                EndPoint = 0.99,
-                CoordinationSystem = eCoordinationSystem.GCS,
-                Direction = eDirection.X,
-                Origin = eLineOrigin.FromStart,
-                Location = eLineLoadLocation.Length,
-                EccentricityEy = 0.0,
-                EccentricityEz = 0.0
-            };
-            var lin2 = new LineLoadOnBeam(Guid.NewGuid(), "lin2")
-            {
-                Member = b1.Id,
-                LoadCase = lc_var1.Id,
-                Distribution = eLineLoadDistribution.Trapez,
-                Value1 = -12500,
-                Value2 = 12500,
-                CoordinateDefinition = eCoordinateDefinition.Relative,
-                StartPoint = 0.01,
-                EndPoint = 0.99,
-                CoordinationSystem = eCoordinationSystem.GCS,
-                Direction = eDirection.Y,
-                Origin = eLineOrigin.FromStart,
-                Location = eLineLoadLocation.Projection,
-                EccentricityEy = 0.0,
-                EccentricityEz = 0.0
-            };
-            var lin3a = new LineLoadOnSlabEdge(Guid.NewGuid(), "lin3a")
-            {
-                Member = s1.Id,
-                LoadCase = lc_var3a.Id,
-                EdgeIndex = 0,
-                Distribution = eLineLoadDistribution.Trapez,
-                Value1 = -12500,
-                Value2 = 12500,
-                CoordinateDefinition = eCoordinateDefinition.Relative,
-                StartPoint = 0.01,
-                EndPoint = 0.99,
-                CoordinationSystem = eCoordinationSystem.GCS,
-                Direction = eDirection.Z,
-                Origin = eLineOrigin.FromStart,
-                Location = eLineLoadLocation.Length
-            };
-            var lin3b = new LineLoadOnSlabEdge(Guid.NewGuid(), "lin3b")
-            {
-                Member = s1.Id,
-                LoadCase = lc_var3b.Id,
-                EdgeIndex = 1,
-                Distribution = eLineLoadDistribution.Trapez,
-                Value1 = -12500,
-                Value2 = 12500,
-                CoordinateDefinition = eCoordinateDefinition.Relative,
-                StartPoint = 0.01,
-                EndPoint = 0.99,
-                CoordinationSystem = eCoordinationSystem.GCS,
-                Direction = eDirection.Z,
-                Origin = eLineOrigin.FromStart,
-                Location = eLineLoadLocation.Length
-            };
-            var lin3c = new LineLoadOnSlabEdge(Guid.NewGuid(), "lin3c")
-            {
-                Member = s1.Id,
-                LoadCase = lc_var3c.Id,
-                EdgeIndex = 2,
-                Distribution = eLineLoadDistribution.Trapez,
-                Value1 = -12500,
-                Value2 = 12500,
-                CoordinateDefinition = eCoordinateDefinition.Relative,
-                StartPoint = 0.01,
-                EndPoint = 0.99,
-                CoordinationSystem = eCoordinationSystem.GCS,
-                Direction = eDirection.Z,
-                Origin = eLineOrigin.FromStart,
-                Location = eLineLoadLocation.Length
-            };
-            var lin3d = new LineLoadOnSlabEdge(Guid.NewGuid(), "lin3d")
-            {
-                Member = s1.Id,
-                LoadCase = lc_perm.Id,
-                EdgeIndex = 3,
-                Distribution = eLineLoadDistribution.Trapez,
-                Value1 = -12500,
-                Value2 = 12500,
-                CoordinateDefinition = eCoordinateDefinition.Relative,
-                StartPoint = 0.01,
-                EndPoint = 0.99,
-                CoordinationSystem = eCoordinationSystem.GCS,
-                Direction = eDirection.Z,
-                Origin = eLineOrigin.FromStart,
-                Location = eLineLoadLocation.Length
-            };
-            foreach (var x in new List<LineLoadOnBeam> { lin1 }) { model.CreateLineLoad(x); }
-            foreach (var x in new List<LineLoadOnSlabEdge> { lin3d }) { model.CreateLineLoad(x); }
-            //foreach (var x in new List<LineLoadOnBeam> { lin1, lin2 }) { model.CreateLineLoad(x); }
-            //foreach (var x in new List<LineLoadOnSlabEdge> { lin3a, lin3b, lin3c, lin3d }) { model.CreateLineLoad(x); }
-            #endregion
             #endregion
             return true;
         }
-
     }
+    #endregion
 }
